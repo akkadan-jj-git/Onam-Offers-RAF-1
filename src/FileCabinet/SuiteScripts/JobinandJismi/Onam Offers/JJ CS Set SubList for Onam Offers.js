@@ -35,18 +35,19 @@ function(url) {
     function fieldChanged(scriptContext) {
         let filter = scriptContext.fieldId;
         let rec = scriptContext.currentRecord;
-
+        let page = rec.getValue({fieldId: 'custpage_pagenumber'});
         let subsidiary = rec.getValue({fieldId: 'custpage_subsidiary'}) || '';
         let name = rec.getValue({fieldId: 'custpage_customer'}) || '';
-        if(scriptContext.fieldId === 'custpage_subsidiary' || scriptContext.fieldId === 'custpage_customer'){
+        if(scriptContext.fieldId === 'custpage_subsidiary' || scriptContext.fieldId === 'custpage_customer' || scriptContext.fieldId === 'custpage_pagenumber'){
             document.location = url.resolveScript({
-                deploymentId: 'customdeploy_jj_sl_onameofferspage',
-                scriptId: 'customscript_jj_sl_onameofferspage',
+                deploymentId: 'customdeployjj_sl_onamoffers_raf1',
+                scriptId: 'customscriptjj_sl_onamoffers_raf1',
                 params: {
+                    pageIndex: page,
                     subsidiaryValue: subsidiary || '',
                     customerName: name || ''
                 }
-            })
+            });
         }
     }
 

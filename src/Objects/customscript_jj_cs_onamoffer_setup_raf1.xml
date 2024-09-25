@@ -1,0 +1,10 @@
+<clientscript scriptid="customscript_jj_cs_onamoffer_setup_raf1">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>JJ CS Onam Offers Setup RAF1</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/JobinandJismi/Onam Offers/JJ CS Set SubList for Onam Offers.js]</scriptfile>
+</clientscript>
