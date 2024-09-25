@@ -200,7 +200,7 @@ define(['N/ui/serverWidget', 'N/email', 'N/record', 'N/search'],
                     let lineCount = request.getLineCount({
                         group: 'custpage_list1'
                     });
-                    let cust_response;
+                    let cust_response = 'POST Responses\n---------------\n';
                     for(let i = 0; i < lineCount; i++){
                         let isChecked = request.getSublistValue({
                             group: subListId,
